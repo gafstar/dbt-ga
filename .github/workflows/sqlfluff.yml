@@ -22,6 +22,14 @@ jobs:
   test-check:
     name: runner / sqlfluff (github-check)
     runs-on: ubuntu-latest
+    env:
+      DBT_PROFILES_DIR: ./
+      PROFILES_YML_HOST: ${{ secrets.PROFILES_YML_HOST }}
+      PROFILES_YML_USER: ${{ secrets.PROFILES_YML_USER }
+      PROFILES_YML_PASS: ${{ secrets.PROFILES_YML_USER }
+      PROFILES_YML_PORT: ${{ secrets.PROFILES_YML_USER }
+      PROFILES_YML_DBNAME: ${{ secrets.PROFILES_YML_USER }
+      PROFILES_YML_SCHEMA: ${{ secrets.PROFILES_YML_USER }
     steps:
       - uses: actions/checkout@v2
       - uses: yu-iskw/action-sqlfluff@v3
