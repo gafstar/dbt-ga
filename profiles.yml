@@ -1,0 +1,12 @@
+redshift:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: dbtredshiftcluster-u1jyhuwkandv.cjijskx2szq9.us-east-1.redshift.amazonaws.com
+      user: dbtadmin
+      password: Dbtadmin108!
+      port: 5439
+      dbname: dbtworkshop
+      schema: analytics
+      threads: 1
