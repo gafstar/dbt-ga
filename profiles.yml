@@ -9,4 +9,5 @@ redshift:
       port: "{{ env_var('PROFILES_YML_PORT') }}"
       dbname: "{{ env_var('PROFILES_YML_DBNAME') }}"
       schema: "{{ env_var('PROFILES_YML_SCHEMA') }}"
-      threads: 1
+      threads: 1 
+
