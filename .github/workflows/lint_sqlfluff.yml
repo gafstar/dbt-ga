@@ -17,10 +17,9 @@ jobs:
           sqlfluff_version: "1.2.0"
           sqlfluff_command: "lint" # Or "fix"
           config: "${{ github.workspace }}/.sqlfluff"
-          paths: '${{ github.workspace }}/transformations'
+          paths: '${{ github.workspace }}/models'
       - name: 'Show outputs (Optional)'
         shell: bash
         run: |
           echo '${{ steps.lint-sql.outputs.sqlfluff-results }}' | jq -r '.'
           echo '${{ steps.lint-sql.outputs.sqlfluff-results-rdjson }}' | jq -r '.'
-          
