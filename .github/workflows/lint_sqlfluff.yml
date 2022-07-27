@@ -1,10 +1,10 @@
 name: Run sqlfluff linter
 
 on:
-  - push
-      - branches
-          - main
-          - sqlfluff_ga2
+  push:
+      branches:
+        - main
+        - sqlfluff_ga2
   
 jobs:
   sql-lint:
