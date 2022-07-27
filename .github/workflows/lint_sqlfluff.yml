@@ -4,7 +4,6 @@ on:
   push:
       branches:
         - main
-        - origin/sqlfluff_ga2
   
 jobs:
   sql-lint:
